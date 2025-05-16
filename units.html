@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.navbar{
+    background-color: #999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main{
+    display: flex;
+}
+.main div{
+    height: 300px;
+    width: 500px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    display: none;
+}
+
+@media screen and ( max-width:500px){
+    .main{
+        flex-direction: column;
+    }
+
+    .main div{
+        width: 100%;
+    border: 1px solid  black;
+
+    }
+    button{
+        display: flex;
+    }
+    .navbar ul{
+        position: absolute;
+        top: 120px;
+        right: 30px;
+        background-color: aqua;
+
+        flex-direction: column;
+}
+}
+
+@media screen and (max-width:385px){
+    .main div{
+        width: 100%;
+    border: 1px solid  purple;
+
+    }
+}
+    
+</style>
+<body>
+   <h1>CSS Media Query:</h1>
+  <div class="wrapper">
+    <nav class="navbar">
+        <h1>CSS</h1>
+        <ul>
+            <li>Product</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Listing</li>
+        </ul>
+        <button>Open Menu</button>
+    </nav>
+    <div class="main">
+        <div>Container 1</div>
+        <div>Container 2</div>
+        <div>Container 3</div>
+
+    </div>
+    <footer>
+        All Right Reserved&copy;2025
+    </footer>
+  </div>
+</body>
+</html>
